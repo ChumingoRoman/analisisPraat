@@ -1,28 +1,32 @@
 # Román, Domingo y Flores, Nicolás
+# 2023
 # Laboratorio de Fonética USACH
 # Julio 2023
 # cog_pic_lpc.praat (v. 06)
-# Script para Praat (probado en la versión 6.3.12)
-#
-#
+# Script para Praat probado en la versión 6.3.12
+# El código se encuentra disponible en...
+# https://github.com/DomingoRomanMontesDeOca/analisisPraat/blob/main/cog_pic_lpc.praat
+# o puede ser solicitado directamente a los creadores a sus correos electrónicos
+# domingo.roman@usach.cl 
+# nicolas.flores.n@usach.cl
+###########################################################
 # Este script es software libre: puede ser distribuido
 # y/o modificado bajo los términos de la licencia
 # GNU General Public License publicada por la Free Software
 # Foundation, ya sea en su versión 3 o (según se prefiera)
 # cualquier versión posterior.
-#
 # Este script se distribuye con la intención de que sea útil,
 # pero SIN GARANTÍA ALGUNA; ni siquiera con la garantía
 # implícita de COMERCIABILIDAD o de PROPIEDAD PARA UN FIN
 # PARTICULAR. Más detalles pueden encontrarse en el texto de
 # la GNU General Public License.
-#
 # El script debió haber sido distribuido con una copia de la
 # GNU General Public License. Si no, este puede encontrarse en
 # <http://www.gnu.org/licenses/>.
 #
-#
 # Copyright 2023, Domingo Román y Nicolás Flores
+#################################################
+
 #################################################
 # identifica el centro de gravedad en una ventana de 10 ms y el pico frecuencial...
 # ... más alto en el análisis LPC en esa misma ventana
