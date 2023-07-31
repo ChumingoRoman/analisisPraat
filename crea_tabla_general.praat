@@ -54,21 +54,55 @@ select tabla_general
 tabla_i = Extract rows where column (text): "tipoK", "is equal to", "i"
 nfilas_i = Get number of rows
 
+select tabla_f
+f_a  = Extract rows where column (text): "tipoK", "is equal to", "a"
+nfilas_f_a  = Get number of rows
+select tabla_f
+f_e  = Extract rows where column (text): "tipoK", "is equal to", "e"
+nfilas_f_e  = Get number of rows
+select tabla_f
+f_i  = Extract rows where column (text): "tipoK", "is equal to", "i"
+nfilas_f_i  = Get number of rows
+
+select tabla_m
+m_a  = Extract rows where column (text): "tipoK", "is equal to", "a"
+nfilas_m_a  = Get number of rows
+select tabla_m
+m_e  = Extract rows where column (text): "tipoK", "is equal to", "e"
+nfilas_m_e  = Get number of rows
+select tabla_m
+m_i  = Extract rows where column (text): "tipoK", "is equal to", "i"
+nfilas_m_i  = Get number of rows
+
+
+
 
 
 createFolder("'directorio_tablas$'/tabla_general")
 
 Save as comma-separated file: "'directorio_tablas$'/tabla_general/tabla_general.Table"
 
-
 writeInfoLine: "Se ha creado la tabla general con ",ene_filas, " datos"
-appendInfoLine: "Sexo f : ", nfilas_f
-appendInfoLine: "Sexo m : ", nfilas_m
+
 appendInfoLine: "Con /a/ : ", nfilas_a
 appendInfoLine: "Con /e/ : ", nfilas_e
 appendInfoLine: "Con /i/ : ", nfilas_i
 
+appendInfoLine: "================================================"
+appendInfoLine: "n de casos   |    a     |     e     |      i"
+appendInfoLine: "             |    ",nfilas_a,"     |     ", nfilas_e,  "     |      ",nfilas_i
 
 
-selectObject: tabla_f, tabla_m, tabla_a, tabla_e, tabla_i
+appendInfoLine: "================================================"
+appendInfoLine: "n de casos   |    f     |      m"
+appendInfoLine: "                  ",nfilas_f,"     |      ",nfilas_m
+
+appendInfoLine: "================================================"
+appendInfoLine: " Vocal   |  Sexo f   |   Sexo m"
+appendInfoLine: "   a     |     ",nfilas_f_a,"     |      ",nfilas_m_a
+appendInfoLine: "   e     |     ",nfilas_f_e,"     |      ",nfilas_m_e
+appendInfoLine: "   i     |     ",nfilas_f_i,"     |      ",nfilas_m_i
+
+
+selectObject: tabla_f, tabla_m, tabla_a, tabla_e, tabla_i, f_a, f_e, f_i, m_a, m_e, m_i
 Remove
