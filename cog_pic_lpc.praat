@@ -2,7 +2,7 @@
 # 2023
 # Laboratorio de Fonética USACH
 # Julio 2023
-# cog_pic_lpc.praat (v. 06)
+# cog_pic_lpc.praat (v. 07)
 # Script para Praat probado en la versión 6.3.12
 # El código se encuentra disponible en...
 # https://github.com/DomingoRomanMontesDeOca/analisisPraat/blob/main/cog_pic_lpc.praat
@@ -26,9 +26,7 @@
 #
 # Copyright 2023, Domingo Román y Nicolás Flores
 #################################################
-
-#################################################
-# identifica el centro de gravedad en una ventana de 10 ms y el pico frecuencial...
+# Identifica el centro de gravedad en una ventana de 10 ms y el pico frecuencial...
 # ... más alto en el análisis LPC en esa misma ventana
 
 # Las cuatro líneas de  # Elección de directorios se pueden cambiar por unas que indiquen la ruta...
@@ -47,7 +45,6 @@
 ### ... en directorio_destino_audios_largos$ están los archivos .wav y TextGrid de los audios originales
 
 
-
 # Elección de directorios
 directorio_origen$ = chooseDirectory$: "Elije el directorio CON los audios"
 directorio_destino$ = chooseDirectory$: "Elije el directorio PARA los audios procesados"
@@ -56,6 +53,12 @@ directorio_tablas$ = chooseDirectory$: "Elije el directorio PARA las tablas"
 
 
 ####################################
+
+
+
+form enepicos
+	real enepicos 5
+endform
 
 
 # Crea un string con todos los archivos .wav del directorio_origen$
@@ -194,7 +197,7 @@ for i to ene_audios
 
 		fft_ventana = To Spectrum: "yes"
 		cogravedad = Get centre of gravity: 2
-		lpc_fft_ventana = LPC smoothing: 5, 50
+		lpc_fft_ventana = LPC smoothing: enepicos, 50
 		tier_picos = To SpectrumTier (peaks)
 		tabla_picos = Down to Table
 		pico_maximo_dB_Hz = Get maximum: "pow(dB/Hz)"
